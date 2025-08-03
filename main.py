@@ -248,7 +248,7 @@ def hidden():
 
 @app.route('/script')
 def execute():
-    script_code = f'loadstring(game:HttpGet("https://{request.host}/error?key=skidder"))()'
+    script_code = f'-- Going under some maintence'
     return '''
 <!DOCTYPE html>
 <html lang="en">
@@ -320,37 +320,6 @@ def execute():
         .discord-btn:hover {
             background: #4752c4;
         }
-
-        .reviews-section {
-            margin-top: 30px;
-            text-align: left;
-        }
-
-        .reviews-title {
-            font-size: 22px;
-            color: #00d4ff;
-            margin-bottom: 15px;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        .review-item {
-            background-color: #1e1e1e;
-            border: 1px solid #2a2a2a;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-
-        .review-user {
-            font-weight: bold;
-            color: #00d4ff;
-            margin-bottom: 5px;
-        }
-
-        .review-text {
-            font-size: 14px;
-        }
     </style>
 </head>
 <body>
@@ -359,46 +328,18 @@ def execute():
         <pre id="scriptBox">''' + script_code + '''</pre>
         <button class="btn" onclick="copyCode()">Copy Script</button>
         <a class="btn discord-btn" href="https://discord.gg/hCTCQwPKd3" target="_blank">Join Discord</a>
-
-        <div class="reviews-section">
-            <div class="reviews-title">💬 User Reviews</div>
-            <div class="review-list" id="reviewContainer">
-            </div>
-        </div>
     </div>
-
     <script>
         function copyCode() {
-            const code = document.getElementById('scriptBox').innerText;
-            navigator.clipboard.writeText(code).then(() => {
-                alert('Script copied to clipboard!');
-            });
+            const codeBox = document.getElementById("scriptBox");
+            const textArea = document.createElement("textarea");
+            textArea.value = codeBox.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+            alert("Script copied to clipboard!");
         }
-
-        const reviews = [
-            { user: "Lilbabby87", text: "10/10 best script known to man and it get better and better every update" },
-            { user: "manman01901", text: "1of the best script I ever used!" },
-            { user: "elitelyex", text: "really recommend, i like to play music while playing." },
-            { user: "thegrinch04616", text: "The script is insanely good in sab for a free script! THERES also other games that i have yet to try." },
-        ];
-
-        const container = document.getElementById("reviewContainer");
-        reviews.forEach(review => {
-            const div = document.createElement("div");
-            div.className = "review-item";
-
-            const user = document.createElement("div");
-            user.className = "review-user";
-            user.innerText = review.user;
-
-            const text = document.createElement("div");
-            text.className = "review-text";
-            text.innerText = review.text;
-
-            div.appendChild(user);
-            div.appendChild(text);
-            container.appendChild(div);
-        });
     </script>
 </body>
 </html>
