@@ -181,7 +181,7 @@ home_page = '''<!DOCTYPE html>
     <div class="section">
       <h2>📜 Get Script</h2>
       <ul>
-        <li>🔗 <a href="https://vertex-z.onrender.com/script" target="_blank">Script</a></li>
+        <li>🔗 <a href="https://dex-hub.onrender.com/script" target="_blank">Script</a></li>
       </ul>
     </div>
 
