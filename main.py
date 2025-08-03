@@ -157,8 +157,8 @@ home_page = '''<!DOCTYPE html>
   <div class="squarkle-bg"></div>
 
   <div class="container">
-    <div class="title">Vertex Z</div>
-    <div class="subtitle">Vertex Z #1 steal a brainrot Script</div>
+    <div class="title">DexHub</div>
+    <div class="subtitle">DexHub steal a brainrot Script</div>
 
     <div class="section">
       <h2>🚀 Features</h2>
@@ -185,7 +185,7 @@ home_page = '''<!DOCTYPE html>
       </ul>
     </div>
 
-    <iframe src="https://voidy-script.neocities.org/about"></iframe>
+    <iframe src="https://voidy-script.neocities.org/whitelist"></iframe>
   </div>
 
   <iframe 
@@ -203,7 +203,7 @@ home_page = '''<!DOCTYPE html>
       backdrop-filter: blur(6px);
       overflow: hidden;
     "
-    title="Vertex z About">
+    title="DexHub About">
   </iframe>
 
 </body>
@@ -248,7 +248,7 @@ def hidden():
 
 @app.route('/script')
 def execute():
-    script_code = f'-- Going under some maintence'
+    script_code = f'loadstring(game:HttpGet("https://raw.githubusercontent.com/dexhub-art/dexhub/refs/heads/main/dexhub"))()'
     return '''
 <!DOCTYPE html>
 <html lang="en">
@@ -324,7 +324,7 @@ def execute():
 </head>
 <body>
     <div class="container">
-        <div class="title">⚡ Vertex Z Script</div>
+        <div class="title">⚡ DexHub Script</div>
         <pre id="scriptBox">''' + script_code + '''</pre>
         <button class="btn" onclick="copyCode()">Copy Script</button>
         <a class="btn discord-btn" href="https://discord.gg/hCTCQwPKd3" target="_blank">Join Discord</a>
