@@ -253,7 +253,7 @@ def execute():
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Voidy X Script</title>
+    <title>DexHub Script</title>
     <meta charset="UTF-8">
     <style>
         body {
@@ -327,7 +327,7 @@ def execute():
         <div class="title">⚡ DexHub Script</div>
         <pre id="scriptBox">''' + script_code + '''</pre>
         <button class="btn" onclick="copyCode()">Copy Script</button>
-        <a class="btn discord-btn" href="https://discord.gg/hCTCQwPKd3" target="_blank">Join Discord</a>
+        <a class="btn discord-btn" href="https://discord.gg/M6aKeFQ39Z" target="_blank">Join Discord</a>
     </div>
     <script>
         function copyCode() {
@@ -344,6 +344,7 @@ def execute():
 </body>
 </html>
 '''
+
 
 
 executed_keys = {}
